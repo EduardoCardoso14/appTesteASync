@@ -7,5 +7,13 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-
+    input:{
+        backgroundColor: 'white',
+        height: '10%',
+        width: '73%',
+        margin: 12,
+        borderWidth: 1,
+        borderColor: 'gray',
+        padding: 10,
+      },
 })

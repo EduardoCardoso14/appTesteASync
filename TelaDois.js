@@ -1,14 +1,21 @@
-import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { React, useState } from 'react';
+import { Text, TouchableOpacity, View, TextInput, Button } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './style/global';
 
 function TelaDois({ navigation }) {
-  let a;
+  const [result, setResult] = useState('');
+
+  const saveValue = async () => {
+    try {
+      await AsyncStorage.setItem('resultB', JSON.stringify(result));
+    } catch (e) {
+      console.error('Erro ao salvar valor:', e);
+    }
+  };
   const loadValue = async () => {
     try {
-      const value = await AsyncStorage.getItem('a');
-      console.log(value);
+      const value = await AsyncStorage.getItem('resultA');
       if (value !== null) {
         a = JSON.parse(value);
       }
@@ -17,12 +24,20 @@ function TelaDois({ navigation }) {
     }
   };
   loadValue();
+  saveValue();
   return (
     <View style={styles.container}>
-      <Text>Tela doiszz {a}</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('TelaTres')}>
-        <Text>Tela 3 </Text>
-      </TouchableOpacity>
+      <Button title='Voltar' onPress={() => navigation.navigate('TelaUm')}></Button>
+      <Text>127 X 23 = </Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Escreva o resultado aqui."
+        keyboardType="numeric"
+        onChangeText={setResult}
+        value={result}
+      />
+      <Button title='Salvar' onPress={() => navigation.navigate('TelaTres')}></Button>
+
     </View>
   );
 }
