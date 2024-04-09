@@ -31,7 +31,8 @@ function TelaTres({ navigation }) {
     return (
         <View style={styles.container}>
             <Button title='Voltar' onPress={() => navigation.navigate('TelaDois')}></Button>
-            <Text>967 X 3 = </Text>
+            <Text></Text>
+            <Text>25 X 5 = </Text>
             <TextInput
                 style={styles.input}
                 placeholder="Escreva o resultado aqui."

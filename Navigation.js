@@ -5,6 +5,7 @@ import TelaUm from "./TelaUm";
 import TelaDois from "./TelaDois";
 import TelaTres from "./TelaTres";
 import Result from "./Result";
+import TelaJson1 from "./TelaJson1";
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ function Navigation() {
                 <Stack.Screen name="TelaDois" component={TelaDois} />
                 <Stack.Screen name="TelaTres" component={TelaTres} />
                 <Stack.Screen name="Result" component={Result} />
+                <Stack.Screen name="TelaJson1" component={TelaJson1} />
             </Stack.Navigator>
         </NavigationContainer >
     );

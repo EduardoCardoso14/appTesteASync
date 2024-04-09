@@ -5,9 +5,9 @@ import styles from './style/global';
 
 function Result({ navigation }) {
 
-    let conta1 = 542 * 87;
-    let conta2 = 127 * 23;
-    let conta3 = 967 * 3;
+    let conta1 = 12 * 2;
+    let conta2 = 18 * 10;
+    let conta3 = 25 * 5;
     const [v1, setV1] = useState();
     const [v2, setV2] = useState();
     const [v3, setV3] = useState();
@@ -34,16 +34,16 @@ function Result({ navigation }) {
     loadValue();
     return (
         <View style={styles.container}>
-            <Text>Questão 1: 542 X 87 </Text>
+            <Text>Questão 1: 12 X 2 </Text>
             {conta1 == v1 ? <Text>Você acertou! Resultado: {conta1}</Text> : <Text>Você errou! Você digitou: {v1} Resultado: {conta1}</Text>}
             <Text></Text>
-            <Text>Questão 2: 127 X 23  </Text>
+            <Text>Questão 2: 18 X 10  </Text>
             {conta2 == v2 ? <Text>Você acertou! Resultado: {conta2}</Text> : <Text>Você errou! Você digitou: {v2} Resultado: {conta2}</Text>}
             <Text></Text>
-            <Text>Questão 3: 967 X 3  </Text>
+            <Text>Questão 3: 25 X 5  </Text>
             {conta3 == v3 ? <Text>Você acertou! Resultado: {conta3}</Text> : <Text>Você errou! Você digitou: {v3} Resultado: {conta3}</Text>}
             <Text></Text>
-            <Button title='Voltar' onPress={() => navigation.navigate('TelaUm')}></Button>
+            <Button title='vai pro jeison' onPress={() => navigation.navigate('TelaJson1')}></Button>
         </View>
     );
 }

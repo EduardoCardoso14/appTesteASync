@@ -28,7 +28,8 @@ function TelaDois({ navigation }) {
   return (
     <View style={styles.container}>
       <Button title='Voltar' onPress={() => navigation.navigate('TelaUm')}></Button>
-      <Text>127 X 23 = </Text>
+      <Text></Text>
+      <Text>18 X 10 = </Text>
       <TextInput
         style={styles.input}
         placeholder="Escreva o resultado aqui."

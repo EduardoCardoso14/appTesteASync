@@ -30,7 +30,7 @@ saveValue();
 
   return (
     <View style={styles.container}>
-      <Text>542 X 87 = </Text>
+      <Text>12 X 2 = </Text>
       <TextInput
         style={styles.input}
         placeholder="Escreva o resultado aqui."
