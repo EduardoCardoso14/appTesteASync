@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Text, TouchableOpacity, View, TextInput, Button } from 'react-native';
+import { Text, TouchableOpacity, View, TextInput, Button, Image } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './style/global';
 
@@ -35,15 +35,70 @@ function Result({ navigation }) {
     return (
         <View style={styles.container}>
             <Text>Questão 1: 12 X 2 </Text>
-            {conta1 == v1 ? <Text>Você acertou! Resultado: {conta1}</Text> : <Text>Você errou! Você digitou: {v1} Resultado: {conta1}</Text>}
+            {conta1 == v1 ?
+                <>
+                    <View style={styles.viewimg}>
+                        <Image
+                            style={styles.img}
+                            source={require('./assets/ok.png')}></Image>
+                        <Text>Você acertou! Resultado: {conta1}</Text>
+                    </View>
+                </>
+                :
+                <>
+                    <View style={styles.viewimg}>
+                        <Image
+                            style={styles.img}
+                            source={require('./assets/nok.png')}></Image>
+                        <Text>Você errou! Você digitou: {v1} Resultado: {conta1}</Text>
+                    </View>
+                </>
+            }
+
             <Text></Text>
             <Text>Questão 2: 18 X 10  </Text>
-            {conta2 == v2 ? <Text>Você acertou! Resultado: {conta2}</Text> : <Text>Você errou! Você digitou: {v2} Resultado: {conta2}</Text>}
+            {conta2 == v2 ?
+                <>
+                    <View style={styles.viewimg}>
+                        <Image
+                            style={styles.img}
+                            source={require('./assets/ok.png')}></Image>
+                        <Text>Você acertou! Resultado: {conta2}</Text>
+                    </View>
+                </>
+                :
+                <>
+                    <View style={styles.viewimg}>
+                        <Image
+                            style={styles.img}
+                            source={require('./assets/nok.png')}></Image>
+                        <Text>Você errou! Você digitou: {v2} Resultado: {conta2}</Text>
+                    </View>
+                </>}
             <Text></Text>
             <Text>Questão 3: 25 X 5  </Text>
-            {conta3 == v3 ? <Text>Você acertou! Resultado: {conta3}</Text> : <Text>Você errou! Você digitou: {v3} Resultado: {conta3}</Text>}
+            {conta3 == v3 ?
+                <>
+                    <View style={styles.viewimg}>
+                        <Image
+                            style={styles.img}
+                            source={require('./assets/ok.png')}></Image>
+                        <Text>Você acertou! Resultado: {conta3}</Text>
+                    </View>
+                </>
+                :
+                <>
+                    <View style={styles.viewimg}>
+                        <Image
+                            style={styles.img}
+                            source={require('./assets/nok.png')}></Image>
+                        <Text>Você errou! Você digitou: {v3} Resultado: {conta3}</Text>
+                    </View>
+                </>
+            }
             <Text></Text>
-            <Button title='vai pro jeison' onPress={() => navigation.navigate('TelaJson1')}></Button>
+            <Text></Text>
+            <Button title='Fazer novamente' onPress={() => navigation.navigate('TelaUm')}></Button>
         </View>
     );
 }

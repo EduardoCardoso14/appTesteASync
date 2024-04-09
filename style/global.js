@@ -16,4 +16,13 @@ export default StyleSheet.create({
         borderColor: 'gray',
         padding: 10,
       },
+      viewimg:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 5
+      },
+      img:{
+        width: 30,
+        height: 30,
+      },
 })
