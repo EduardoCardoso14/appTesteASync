@@ -98,7 +98,7 @@ function Result({ navigation }) {
             }
             <Text></Text>
             <Text></Text>
-            <Button title='Fazer novamente' onPress={() => navigation.navigate('TelaUm')}></Button>
+            <Button title='Fazer novamente' onPress={() => navigation.navigate('TelaJson2')}></Button>
         </View>
     );
 }
